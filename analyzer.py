@@ -149,7 +149,7 @@ class Analyzer:
             small = img.resize((img.width // 2, img.height // 2))
             return clean_ocr(pytesseract.image_to_string(small))
         except Exception as e:
-            print(f"[Analyzer] OCR error: {e}")
+            print(f"[Analyzer] OCR error:: {e}")
             return ""
 
     def analyze(self, img) -> tuple[str, str]:
